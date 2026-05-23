@@ -32,7 +32,7 @@
     background:var(--danger);box-shadow:0 0 0 2px var(--primary-dark);
   }
   .fab-pop{
-    position:fixed;bottom:96px;right:36px;z-index:51;
+    position:fixed;bottom:148px;right:36px;z-index:51;
     width:300px;background:#fff;border:1px solid var(--border-muted);border-radius:14px;
     box-shadow:0 16px 48px -12px rgba(20,39,66,.25), 0 4px 12px rgba(20,39,66,.08);
     transform-origin:bottom right;
