@@ -1,0 +1,325 @@
+html,
+body {
+  height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: var(--bg-subtle);
+}
+
+#root {
+  height: 100%;
+}
+
+.stage {
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.stage-body,
+.content-area,
+main,
+.card,
+.brand,
+.brand-row,
+.steps {
+  min-width: 0;
+}
+
+.stage-body,
+.content-area {
+  min-height: 0;
+  overflow: hidden;
+}
+
+main {
+  width: 100%;
+  overflow: hidden;
+}
+
+main.export-page {
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+.export-grid {
+  min-height: 0;
+}
+
+.chat-stream,
+.u-body,
+.sec-list .list,
+.editor-body,
+.paper-scroll,
+.doc-paper-wrap,
+.issues-list,
+.right-col,
+.verify-panel,
+.ai-panel,
+.export-panel {
+  min-height: 0;
+}
+
+.right-col,
+.verify-panel,
+.ai-panel,
+.export-panel {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.app-header {
+  flex: 0 0 auto;
+  min-height: 96px;
+  height: auto;
+  flex-wrap: wrap;
+  row-gap: 12px;
+}
+
+.steps {
+  overflow-x: auto;
+  justify-content: flex-end;
+  padding-bottom: 4px;
+}
+
+.step {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.card-head,
+.toolbar,
+.tb-right,
+.footer-bar,
+.foot-left,
+.hero,
+.hero-stats {
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.footer-bar {
+  flex: 0 0 auto;
+}
+
+.paper,
+.mini-paper {
+  width: min(100%, 720px) !important;
+  max-width: 100%;
+}
+
+.doc-paper-wrap,
+.paper-scroll,
+.editor-body {
+  overflow: auto;
+}
+
+table {
+  max-width: 100%;
+}
+
+@media (max-width: 1440px) {
+  .sidebar {
+    width: 220px;
+    flex-basis: 220px;
+  }
+
+  .app-header {
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+    gap: 24px;
+  }
+
+  main {
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+    gap: 18px;
+  }
+
+  .footer-bar {
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+
+  main.interview {
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 420px) !important;
+  }
+
+  main.verify {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 420px) !important;
+  }
+
+  main.section {
+    grid-template-columns: 260px minmax(0, 1fr) 320px !important;
+  }
+
+  main.export-page,
+  .export-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 420px) !important;
+  }
+
+  .editor-body {
+    padding-left: 36px !important;
+    padding-right: 36px !important;
+  }
+}
+
+@media (max-width: 1180px) {
+  .stage-body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex: 0 0 auto;
+    min-height: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 14px;
+  }
+
+  .sb-brand,
+  .sb-user {
+    border: 0;
+    padding: 0;
+    flex: 0 0 auto;
+  }
+
+  .sb-brand .name small,
+  .sb-section,
+  .sb-tip,
+  .sb-spacer,
+  .sb-user .meta,
+  .sb-user .gear {
+    display: none;
+  }
+
+  .sb-nav {
+    flex-direction: row;
+    flex: 0 0 auto;
+    padding: 0;
+  }
+
+  .sb-item {
+    white-space: nowrap;
+  }
+
+  .content-area {
+    min-height: 0;
+  }
+
+  main.interview,
+  main.verify,
+  main.section,
+  main.export-page,
+  .export-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .export-grid {
+    margin-top: 18px !important;
+  }
+
+  main {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .right-col,
+  .verify-panel,
+  .ai-panel,
+  .export-panel {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .sec-list .list {
+    max-height: 320px;
+  }
+
+  .hero {
+    align-items: flex-start !important;
+  }
+
+  .hero-stats {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .app-header {
+    padding: 18px 20px !important;
+  }
+
+  main {
+    padding: 18px 20px 0 !important;
+  }
+
+  .footer-bar {
+    height: auto;
+    min-height: 80px;
+    padding: 14px 20px !important;
+    gap: 12px;
+  }
+
+  .brand-row {
+    flex-wrap: wrap;
+  }
+
+  .brand-title {
+    font-size: 19px;
+  }
+
+  .brand-title .light {
+    display: inline;
+  }
+
+  .step-line {
+    width: 24px;
+    margin: 0 8px;
+  }
+
+  .msg {
+    max-width: 92% !important;
+  }
+
+  .composer,
+  .doc-card .toolbar,
+  .doc-preview .toolbar,
+  .editor .toolbar {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .composer .field {
+    min-width: 100%;
+  }
+
+  .fmt-grid,
+  .stat-grid,
+  .drops {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero .check {
+    width: 52px;
+    height: 52px;
+  }
+
+  .hero .info h2 {
+    font-size: 22px !important;
+  }
+
+  .mini-paper,
+  .paper {
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+}
